@@ -28,7 +28,9 @@ let gasto_estimado = 30;
 let gasto_diario = presupuesto/dias_vuelo;
 if (gasto_diario < gasto_estimado){
     new_presupuesto= prompt("tu presupuesto es muy bajo, modifica tu presupuesto")
-    console.log("tu nnuevo presupuesto es: " + new_presupuesto)
+    console.log("tu nuevo presupuesto es: " + new_presupuesto)
     new_dias_vuelo = prompt("¿ingresa cuantos dias quieres viajar?")
-    console.log("tus dias de vuelo son: "+ new_dias_vuelo)
+    console.log("tus dias de vuelo actualizados son: "+ new_dias_vuelo);
+} else{
+    return alert("Buen Viaje!")
 }
