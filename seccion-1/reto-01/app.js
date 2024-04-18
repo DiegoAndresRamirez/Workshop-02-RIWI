@@ -17,20 +17,28 @@
 // Decide qué datos son propensos a cambiar durante la fase de planificación y cuáles no. Esto te ayudará a elegir entre usar let, o const para declarar tus variables.
 // Considera la importancia de cada tipo de dato y cómo la flexibilidad en la modificación de estos datos puede afectar la planificación de tu viaje.
 
-let bienvenida = alert("Bienvenido a tu planificadoro de viajes!");
-const destino = prompt("Ingresa tu destino:");
-console.log("tu destino es: " + destino);
-let dias_vuelo = prompt("¿ingresa cuantos dias quieres viajar?");
-console.log("tus dias de viaje: " + dias_vuelo);
-let presupuesto = prompt("ingresa tu presupuesto inicial $$$ / el presupuesto minimo por dia para" + destino + " es de 30$: ");
-console.log("tu presupuesto: " + presupuesto);
-let gasto_estimado = 30;
-let gasto_diario = presupuesto/dias_vuelo;
-if (gasto_diario < gasto_estimado){
-    new_presupuesto= prompt("tu presupuesto es muy bajo, modifica tu presupuesto")
-    console.log("tu nuevo presupuesto es: " + new_presupuesto)
-    new_dias_vuelo = prompt("¿ingresa cuantos dias quieres viajar?")
-    console.log("tus dias de vuelo actualizados son: "+ new_dias_vuelo);
-} else{
-    return alert("Buen Viaje!")
+let welcome = alert("Bienvenido a tu planificadoro de viajes!");
+const destination = prompt("Ingresa tu destino:");
+console.log("tu destino es: " + destination);
+let flight_days = prompt("¿ingresa cuantos dias quieres viajar?");
+console.log("tus dias de viaje: " + flight_days);
+let budget = prompt("ingresa tu presupuesto inicial $$$ / el presupuesto minimo por dia para" + destination + " es de 30$: ");
+console.log("tu presupuesto: " + budget);
+let estimated_expennse = 30;
+let daily_expense = budget/flight_days;
+if (daily_expense < estimated_expennse){
+    new_budget= prompt("tu presupuesto es muy bajo, deberias aumentar tu presupuesto")
+    console.log("tu nuevo presupuesto es: " + new_budget)
+    new_flight_days = prompt("¿ingresa cuantos dias quieres viajar?")
+    let new_daily_expense = new_budget/new_flight_days;
+    console.log("tus dias de vuelo actualizados son: "+ new_flight_days);
+    if (new_daily_expense < estimated_expennse){
+        alert("No tienes suficiente presupuesto! :(")
+        console.log("no tienes suficiente presupuesto, vuelve pronto...")
+    }else{
+        console.log("que tengas un buen viaje!")
+    } 
+}else{
+    alert("Que tengas un buen Viaje!")
+    console.log("que tengas un buen viaje... :)")
 }
